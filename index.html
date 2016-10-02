@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="main.css" type="text/css" rel="stylesheet"/>
     <meta charset="UTF-8">
     <title>Assignment02</title>
     <script src="libraries/p5.js" type="text/javascript"></script>
@@ -13,5 +14,26 @@
     <style> body {padding: 0; margin: 0;} canvas {vertical-align: top;} </style>
   </head>
   <body>
+    <article id="container">
+    <form id = "difficultSelector">
+      <p id="difficultTitle">Choose difficulty</p>
+      <ul id="difficultList">
+        <li><button class="btn" id="easy" name="difficulty" onclick="selectDifficulty(this); return false;" value="easy">EASY</button></li>
+        <li><button class="btn" id="medium"name="difficulty"onclick="selectDifficulty(this); return false;"value="medium">SEMI-MEDIUM</button></li>
+        <li><button class="btn" id="hard"name="difficulty"onclick="selectDifficulty(this); return false;" value="hard">SEMI-HARD</button></li>
+      </ul>
+    </form>
+    </article>
+
+  <article id="cheatContainer">
+    <form id="cheatRange">
+      <p id="cheatTitle">Cheats</p>
+      <p>Denise Hemphill's speed: </p>
+      0<input type="range" id="range1" min="0" max="3" step="0.1" value="1.5" onchange="updateDeniseSpeed(this);" oninput="updateDeniseSpeed(this);">3
+      <p>Chanel's speed:</p>
+      0<input type="range" id="range2" min="0" max="3" step="0.1" value="1.5" onchange="updateChanelSpeed(this);" oninput="updateChanelSpeed(this);">3
+    </form>
+  </article>
+    
   </body>
 </html>
